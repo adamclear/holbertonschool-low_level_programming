@@ -1,0 +1,4 @@
+#!/bin/bash
+# This file runs the file name in variable $CFILE through the preprocessor and saves the result to another file named "c".
+
+gcc -E "$CFILE" > c
