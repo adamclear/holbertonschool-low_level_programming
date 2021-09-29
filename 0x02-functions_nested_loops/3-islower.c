@@ -9,13 +9,13 @@
 int _islower(int c)
 {
 
-if (c >= 65 && c <= 90)
+if (c >= 'a' && c <= 'z')
 {
-c = 0;
+c = 1;
 }
 else
 {
-c = 1;
+c = 0;
 }
 return (c);
 }
