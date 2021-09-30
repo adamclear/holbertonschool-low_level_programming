@@ -1,0 +1,14 @@
+#include "main.h"
+/**
+ * add- adds two integers
+ * @f: return variable
+ *
+ * Return: int
+ */
+
+int add(int x, int y)
+{
+	int f = (x + y);
+
+	return (f);
+}
