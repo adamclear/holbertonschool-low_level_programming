@@ -16,19 +16,22 @@ void print_to_98(int n)
 			_putchar(',');
 			_putchar(' ');
 		}
+		_putchar('\n');
 	}
 	else if (n > 98)
 	{
-		for (n = n; n > 97; n++)
+		for (n = n; n > 97; n--)
 		{
-			_putchar(n + '0');
+			_putchar('0' + n);
 			_putchar(',');
 			_putchar(' ');
 		}
+		_putchar('\n');
 	}
 	else
 	{
 		_putchar(n);
+		_putchar('\n');
 	}
 return;
 }
