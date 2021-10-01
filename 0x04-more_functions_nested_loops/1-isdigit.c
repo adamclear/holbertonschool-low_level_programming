@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * _isupper- checks if a character is uppercase
+ * _isdigit- checks if a character is a number 0-9
  * @c: return variable
  * Return: int
  */
-int _isupper(int c)
+int _isdigit(int c)
 {
-	if (c >= 'A' && c <= 'Z')
+	if (c >= '0' && c <= '9')
 	{
 		c = 1;
 	}
