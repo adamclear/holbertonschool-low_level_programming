@@ -4,7 +4,7 @@
  * main - causes an infinite loop
  * Return: 0
  */
-
+/*i never incremements, so it will always be <10 */
 int main(void)
 {
 	int i;
@@ -17,7 +17,7 @@ int main(void)
 	{
 		putchar(i);
 	}
-	/* i never increments, so it will always be <10 */
+
 	printf("Infinite loop avoided! \\o/\n");
 
 	return (0);
