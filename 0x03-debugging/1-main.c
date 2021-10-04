@@ -4,7 +4,7 @@
  * main - causes an infinite loop
  * Return: 0
  */
-/* i never increments, so loop will never end */
+
 int main(void)
 {
 	int i;
@@ -12,7 +12,7 @@ int main(void)
 	printf("Infinite loop incoming :(\n");
 
 	i = 0;
-
+	/* i never increments, so loop never ends */
 	while (i < 10)
 	{
 		putchar(i);
