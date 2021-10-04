@@ -12,7 +12,8 @@ int main(void)
 	printf("Infinite loop incoming :(\n");
 
 	i = 0;
-	/* i never increments, so loop never ends
+	/*
+	 * i never increments, so loop never ends
 	 * while (i < 10)
 	 * {
 	 *	putchar(i);
