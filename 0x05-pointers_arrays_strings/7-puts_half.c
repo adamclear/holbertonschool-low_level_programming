@@ -6,13 +6,12 @@
  */
 void puts_half(char *str)
 {
-	int half;
 	int l = _strlen(str);
 	int i = 0;
+	int half = l / 2;
 
 	if (l % 2 == 0)
 	{
-		half = l / 2;
 		str = str + half;
 		while (i <= half)
 		{
@@ -23,7 +22,6 @@ void puts_half(char *str)
 	}
 	else
 	{
-		half = (l - 1) / 2;
 		str = str + half;
 		while (i <= half)
 		{
