@@ -9,11 +9,11 @@ void puts_half(char *str)
 	int half;
 	int l = _strlen(str);
 
-	if (l % 2 ==0)
+	if (l % 2 == 0)
 	{
 		half = l / 2;
 		str = str + half;
-		while (*str != '\0')
+		while (*str <= '\0')
 		{
 			_putchar(*str);
 			str++;
@@ -23,7 +23,7 @@ void puts_half(char *str)
 	{
 		half = (l - 1) / 2;
 		str = str + half;
-		while (*str != '\0')
+		while (*str <= '\0')
 		{
 			_putchar(*str);
 			str++;
@@ -42,9 +42,9 @@ int _strlen(char *s)
 	int l = 0;
 
 	while (*s != '\0')
-		{
-			l++;
-			s++;
-		}
-	return (l);
+	{
+		l++;
+		s++;
+	}
+return (l);
 }
