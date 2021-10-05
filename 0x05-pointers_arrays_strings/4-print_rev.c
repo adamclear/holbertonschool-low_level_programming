@@ -6,14 +6,14 @@
  */
 void print_rev(char *s)
 {
-	int l = 0;
+	int l = -1;
 
 	while (*s != '\0')
 	{
 		s++;
 		l++;
 	}
-	while (l > 0)
+	while (l >= 0)
 	{
 		_putchar(*s);
 		s--;
