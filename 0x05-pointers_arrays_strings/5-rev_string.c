@@ -30,15 +30,19 @@ void rev_string(char *s)
 	}
 return;
 }
-
+/**
+ * _strlen- returns length of string
+ * @s: input variable pointer
+ * Return: l
+ */
 int _strlen(char *s)
 {
 	int l = 0;
 
 	while (*s != '\0')
-		{
-			l++;
-			s++;
-		}
+	{
+		l++;
+		s++;
+	}
 	return (l);
 }
