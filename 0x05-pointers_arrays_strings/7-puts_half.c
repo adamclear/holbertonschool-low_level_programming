@@ -8,30 +8,27 @@ void puts_half(char *str)
 {
 	int l = _strlen(str);
 	int i = 0;
-	int half = l / 2;
+	int half;
 
 	if (l % 2 == 0)
 	{
-		str = str + half;
-		while (i <= half)
-		{
-			_putchar(*str);
-			str++;
-			i++;
-		}
+		half = l / 2;
 	}
 	else
 	{
-		str = str + half;
-		while (i <= half)
-		{
-			_putchar(*str);
-			str++;
-			i++;
-		}
+		half = (l - 1) / 2;
 	}
+	str = str + half;
+	while (i <= half -1)
+	{
+		_putchar(*str);
+		str++;
+		i++;
+	}
+	_putchar('\n');
 return;
 }
+
 
 /**
  * _strlen- returns the length of a string
