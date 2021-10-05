@@ -7,7 +7,7 @@
 void puts_half(char *str)
 {
 	int half;
-	int l = strlen(str);
+	int l = _strlen(str);
 
 	if (l % 2 ==0)
 	{
@@ -30,4 +30,21 @@ void puts_half(char *str)
 		}
 	}
 return;
+}
+
+/**
+ * _strlen- returns the length of a string
+ * @s: input string pointer
+ * Return: void
+ */
+int _strlen(char *s)
+{
+	int l = 0;
+
+	while (*s != '\0')
+		{
+			l++;
+			s++;
+		}
+	return (l);
 }
