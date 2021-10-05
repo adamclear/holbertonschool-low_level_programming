@@ -8,25 +8,28 @@ void puts_half(char *str)
 {
 	int half;
 	int l = _strlen(str);
+	int i = 0;
 
 	if (l % 2 == 0)
 	{
 		half = l / 2;
 		str = str + half;
-		while (*str <= '\0')
+		while (i <= half)
 		{
 			_putchar(*str);
 			str++;
+			i++;
 		}
 	}
 	else
 	{
 		half = (l - 1) / 2;
 		str = str + half;
-		while (*str <= '\0')
+		while (i <= half)
 		{
 			_putchar(*str);
 			str++;
+			i++;
 		}
 	}
 return;
