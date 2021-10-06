@@ -19,12 +19,12 @@ char *_strcpy(char *dest, char *src)
 	for (i = 0; i <= l + 1; i++)
 	{
 		*dest = *src;
-		*src++;
-		*dest++;
+		src++;
+		dest++;
 	}
 	for (i = 0; i <= l + 1; i++)
 	{
-		*dest--;
+		dest--;
 	}
 return (dest);
 }
