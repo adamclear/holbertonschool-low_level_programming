@@ -11,7 +11,7 @@ int _atoi(char *s)
 	int pos = 0;
 	int sign;
 
-	while (*s == '\0')
+	while (*s != '\0')
 	{
 		if (*s == '-')
 		{
@@ -21,7 +21,7 @@ int _atoi(char *s)
 		{
 			pos++;
 		}
-		else if (*s >= 0 && *s <= 9)
+		else if (*s >= '0' && *s <= '9')
 		{
 			val = val * 10 + *s - '0';
 		}
