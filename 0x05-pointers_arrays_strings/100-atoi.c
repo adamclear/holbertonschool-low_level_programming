@@ -26,6 +26,10 @@ int _atoi(char *s)
 			val = val * 10;
 			val = val + *s - '0';
 		}
+		else if (*s == ';')
+		{
+			break;
+		}
 		s++;
 	}
 	if (neg % 2 != 0)
