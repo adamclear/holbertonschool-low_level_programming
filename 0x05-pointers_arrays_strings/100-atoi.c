@@ -32,7 +32,7 @@ int _atoi(char *s)
 		{
 			val = val * 10 + ((*s - '0') * sign);
 		}
-		else if(*s < '0' || *s > '9')
+		else if (*s < '0' || *s > '9')
 		{
 			break;
 		}
