@@ -23,8 +23,7 @@ int _atoi(char *s)
 		}
 		else if (*s >= '0' && *s <= '9')
 		{
-			val = val * 10;
-			val = val + *s;
+			val = val * 10 + (*s - '0');
 		}
 		else if (*s == ';')
 		{
