@@ -27,7 +27,7 @@ int _atoi(char *s)
 		}
 		s++;
 	}
-	if (neg > pos)
+	if (neg % 2 != 0)
 	{
 		sign = -1;
 	}
