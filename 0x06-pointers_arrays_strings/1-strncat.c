@@ -11,12 +11,12 @@ char *_strncat(char *dest, char *src, int n)
 	int lend = 0;
 	int lens;
 
-	while (*dest !='\0')
+	while (*dest != '\0')
 	{
 		dest++;
 		lend++;
 	}
-	for (lens = 0; lens < n; lens ++)
+	for (lens = 0; lens < n; lens++)
 	{
 		if (*src == '\0')
 		{
