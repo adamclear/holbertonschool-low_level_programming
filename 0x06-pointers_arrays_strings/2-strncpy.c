@@ -18,7 +18,6 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		*(dest++) = '\0';
 		len++;
-		src++;
 	}
 	dest = dest - len;
 return (dest);
