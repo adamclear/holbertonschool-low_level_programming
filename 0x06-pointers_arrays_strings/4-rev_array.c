@@ -22,7 +22,7 @@ void reverse_array(int *a, int n)
 	{
 		tmp = *end;
 		*end = *beg;
-		*beg = *tmp;
+		*beg = tmp;
 
 		beg++;
 		end--;
