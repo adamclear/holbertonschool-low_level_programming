@@ -11,7 +11,7 @@ char *cap_string(char *str)
 	char sep[13] = {32, 9, '\n', 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 	char *psep = sep;
 
-	for l = 0; *str != '\0'; l++)
+	for (l = 0; *str != '\0'; l++)
 	{
 		if (*str >= 'a' && *str <= 'z')
 		{
