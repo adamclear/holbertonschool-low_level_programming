@@ -7,32 +7,27 @@
 char *leet(char *str)
 {
 	int l;
+	int i = 0;
+	char stan[11] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L', '\0'};
+	char leet[11] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1', '\0'};
+	char *pstan = stan;
+	char *pleet = leet;
 
 	for (l = 0; *str != '\0'; l++)
 	{
-		switch (*str)
+		while (i < 10)
 		{
-		case 'A':
-		case 'a':
-			*str = '4';
-			break;
-		case 'E':
-		case 'e':
-			*str = '3';
-			break;
-		case 'o':
-		case 'O':
-			*str = '0';
-			break;
-		case 't':
-		case 'T':
-			*str = '7';
-			break;
-		case 'l':
-		case 'L':
-			*str = '1';
-			break;
+			if (*str == *pstan)
+			{
+				*str = *pleet;
+			}
+			pstan++;
+			pleet++;
+			i++;
 		}
+		pstan = pstan - i;
+		pleet = pleet - i;
+		i = 0;
 		str++;
 	}
 	str = str - l;
