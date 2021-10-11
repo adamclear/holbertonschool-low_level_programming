@@ -8,14 +8,13 @@
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	int l;
-	char **pdest = &dest;
+	unsigned int l;
 
 	for (l = 0; l < n; l++)
 	{
-		**pdest = *src;
+		*dest = *src;
 		dest++;
 		src++;
 	}
-return (**pdest);
+return (dest);
 }
