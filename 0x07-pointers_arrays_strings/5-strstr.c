@@ -1,5 +1,4 @@
 #include "main.h"
-#define NULL 0
 /**
  * _strstr- locates a substring
  * @haystack: input array pointer
@@ -37,8 +36,8 @@ char *_strstr(char *haystack, char *needle)
 		}
 		if (*needle == '\0')
 		{
-			needle = needle - n;
-			return (needle);
+			haystack = haystack - n;
+			return (haystack);
 		}
 		haystack++;
 	}
