@@ -1,4 +1,5 @@
 #include "main.h"
+#define NULL 0
 /**
  * _strchr- locates the first instance of a character in a string
  * @s: input string pointer
@@ -16,6 +17,10 @@ char *_strchr(char *s, char c)
 			break;
 		}
 		s++;
+		if (*s == '\0')
+		{
+			return (NULL);
+		}
 	}
 return (s);
 }
