@@ -22,6 +22,11 @@ char *_strstr(char *haystack, char *needle)
 			{
 				needle++;
 				haystack++;
+				if (*needle == '\0')
+				{
+					haystack = haystack - n - 1;
+					return (haystack);
+				}
 				if (*haystack == *needle)
 				{
 					continue;
@@ -33,11 +38,6 @@ char *_strstr(char *haystack, char *needle)
 					break;
 				}
 			}
-		}
-		if (*needle == '\0')
-		{
-			needle = needle - n;
-			return (needle);
 		}
 		haystack++;
 	}
