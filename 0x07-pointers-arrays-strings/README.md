@@ -1,1 +1,0 @@
-This lesson is all about even more pointers, arrays, and strings.
