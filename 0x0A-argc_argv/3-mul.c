@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	if (argc > 1)
+	if (argc == 3)
 	{
 		int val1 = _atoi(argv[1]);
 		int val2 = _atoi(argv[2]);
