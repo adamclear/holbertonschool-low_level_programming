@@ -2,7 +2,7 @@
 #include <stdio.h>
 #define UNUSED(x) (void)(x)
 /**
- * mynameis- program prints its own name
+ * main- program prints its own name
  * @argc: number of arguments
  * @argv: pointer to array of arguments passed
  * Return: 0 on success
