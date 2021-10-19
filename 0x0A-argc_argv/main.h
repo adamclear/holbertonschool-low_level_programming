@@ -2,6 +2,8 @@
 #define MAIN_H
 
 int _putchar(char c);
-int _atoi(char *s);
+int checknum(char *str);
+int _isdigit(int c);
+int _strlen(char *s);
 
 #endif /* MAIN_H */
