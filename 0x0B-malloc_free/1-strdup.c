@@ -8,17 +8,9 @@
  */
 char *_strdup(char *str)
 {
-	unsigned int len = 0;
-
-	while (*str != '\0')
-	{
-		str++;
-		len++;
-	}
-	str = str - len;
-
+	int len = _strlen(str);
+	int x;
 	char *dup = (char *)malloc((len + 1) * sizeof(char));
-	unsigned int x;
 
 	if (len == 0)
 	{
@@ -30,4 +22,25 @@ char *_strdup(char *str)
 		str++;
 	}
 return (dup);
+}
+
+/**
+ * _strlen- finds the length of a given string
+ * @str: input string pointer
+ * Return: len on success, 0 if not or if string is empty
+ */
+int _strlen(char *str)
+{
+	int len = 0;
+
+	while (*str != '\0')
+	{
+		str++;
+		len++;
+	}
+	if (len == 0 || !str)
+	{
+		return (0);
+	}
+	return (len);
 }
