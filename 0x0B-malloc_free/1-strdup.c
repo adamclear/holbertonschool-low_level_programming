@@ -12,7 +12,7 @@ char *_strdup(char *str)
 	int x;
 	char *dup = (char *)malloc((len + 1) * sizeof(char));
 
-	if (len == 0 || *str == '\0' || !str)
+	if (len == 0 || !str)
 	{
 		return ('\0');
 	}
@@ -38,9 +38,5 @@ int _strlen(char *str)
 		str++;
 		len++;
 	}
-	if (len == 0 || !str)
-	{
-		return (0);
-	}
-	return (len);
+return (len);
 }
