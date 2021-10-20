@@ -15,17 +15,40 @@ char *str_concat(char *s1, char *s2)
 	int y = 0;
 	char *cat = (char *)malloc((len1 + (len2 + 1)) * sizeof(char));
 
-	for (x = 0; x < len1; x++)
+	if (s1 == NULL && s2 == NULL)
 	{
-		cat[y] = *s1;
-		s1++;
-		y++;
+		cat[0] = '\0';
+		return (cat);
 	}
-	for (x = 0; x <= len2; x++)
+	if (s1 != NULL)
 	{
-		cat[y] = *s2;
-		s2++;
-		y++;
+		if (s2 != NULL)
+		{
+			for (x = 0; x < len1; x++)
+			{
+				cat[y] = *s1;
+				s1++;
+				y++;
+			}
+		}
+		else
+		{
+			for (x = 0; x <= len1; x++)
+			{
+				cat[y] = *s1;
+				s1++;
+				y++;
+			}
+		}
+	}
+	if (s2 != NULL)
+	{
+		for (x = 0; x <= len2; x++)
+		{
+			cat[y] = *s2;
+			s2++;
+			y++;
+		}
 	}
 return (cat);
 }
