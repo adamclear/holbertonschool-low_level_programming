@@ -16,12 +16,18 @@ char *_strdup(char *str)
 	{
 		return ('\0');
 	}
-	for (x = 0; x <= len; x++)
+	else
 	{
-		dup[x] = *str;
-		str++;
+		char *dup = (char *)malloc((len + 1) * sizeof(char));
+
+		for (x = 0; x <= len; x++)
+		{
+			dup[x] = *str;
+			str++;
+		}
+		return (dup);
 	}
-return (dup);
+return ('\0');
 }
 
 /**
