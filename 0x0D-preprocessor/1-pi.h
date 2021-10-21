@@ -1,6 +1,3 @@
-#ifndef _FILE_NAME_H_
-#define _FILE_NAME_H_
-
+#ifndef PI
 #define PI 3.14159265359
-
-#endif _FILE_NAME_H_
+#endif /* PI */

@@ -1,6 +1,3 @@
-#ifndefine _FILE_NAME_H_
-#define _FILE_NAME_H_
-
+#ifndefine ABS(x)
 #define ABS(x) ((x < 0) ? (-x) : (x))
-
-#endif _FILE_NAME_H_
+#endif /* ABS */
