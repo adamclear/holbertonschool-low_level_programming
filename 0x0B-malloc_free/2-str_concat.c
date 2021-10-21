@@ -13,7 +13,7 @@ char *str_concat(char *s1, char *s2)
 	int len2 = _strlen(s2);
 	int x;
 	int y = 0;
-	char *cat = (char *)malloc((len1 + (len2 + 1)) * sizeof(char));
+	char *cat = (char *)malloc(1 + (len1 + len2) * sizeof(char));
 
 	if (s1 == NULL && s2 == NULL)
 		cat[0] = '\0';
