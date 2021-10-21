@@ -19,23 +19,22 @@ char *str_concat(char *s1, char *s2)
 		cat[0] = '\0';
 
 	if (s2 == NULL)
-		len++;
+		len1++;
 
 	if (s1 != NULL)
-	{
 		for (x = 0; x < len1; x++)
+		{
 			cat[y] = *s1;
 			s1++;
 			y++;
-
-	}
+		}
 	if (s2 != NULL)
-	{
 		for (x = 0; x <= len2; x++)
+		{
 			cat[y] = *s2;
 			s2++;
 			y++;
-	}
+		}
 return (cat);
 }
 
