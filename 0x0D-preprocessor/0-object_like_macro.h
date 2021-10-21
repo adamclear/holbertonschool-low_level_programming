@@ -1,6 +1,3 @@
-#infdef _FILE_NAME_H_
-#define _FILE_NAME_H_
-
+#ifndef SIZE
 #define SIZE 1024
-
-#endif _FILE_NAME_H_
+#endif /* SIZE */
