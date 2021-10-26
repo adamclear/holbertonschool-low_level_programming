@@ -8,10 +8,10 @@
  */
 void print_dog(struct dog *d)
 {
-	if (strlen(d->name) == 0)
+	if (_strlen(d->name) == 0)
 		d->name = "(nil)";
 
-	if (strlen(d->owner) == 0)
+	if (_strlen(d->owner) == 0)
 		d->owner = "(nil)";
 	if (d)
 	{
@@ -20,4 +20,19 @@ void print_dog(struct dog *d)
 		printf("Owner: %s\n", d->owner);
 	}
 return;
+}
+
+/**
+ * _strlen- finds the length of a string
+ * @s: input string pointer
+ * Return: len
+ */
+int _strlen(char *s)
+{
+	int len;
+
+	for (len = 0; *s != '\0'; len++, s++)
+	{
+	}
+return (len);
 }
