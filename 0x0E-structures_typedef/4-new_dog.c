@@ -14,7 +14,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *iname = malloc((_strlen(name) + 1) * sizeof(char));
 	char *iowner = malloc((_strlen(owner) + 1) * sizeof(char));
 
-	if (!iname || !iowner)
+	if (!iname || !iowner || !doginit)
 	{
 		return (NULL);
 	}
@@ -25,10 +25,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		doginit->name = iname;
 		doginit->age = age;
 		doginit->owner = iowner;
-	}
-	else
-	{
-		return (NULL);
 	}
 return (doginit);
 }
