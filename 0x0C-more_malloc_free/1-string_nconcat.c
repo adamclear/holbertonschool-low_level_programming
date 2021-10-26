@@ -46,6 +46,10 @@ unsigned int _strlen(char *s)
 {
 	unsigned int n;
 
+	if (s == NULL)
+	{
+		return (0);
+	}
 	for (n = 0; *s != '\0'; n++)
 	{
 		s++;
