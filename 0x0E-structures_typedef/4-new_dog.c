@@ -20,9 +20,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	_strcpy(iname, name);
 	_strcpy(iowner, owner);
-	doginit->name = iname;
-	doginit->age = age;
-	doginit->owner = iowner;
+	if (doginit)
+	{
+		doginit->name = iname;
+		doginit->age = age;
+		doginit->owner = iowner;
+	}
 return (doginit);
 }
 
