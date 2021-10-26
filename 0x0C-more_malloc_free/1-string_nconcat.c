@@ -11,9 +11,9 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int x = 0;
-	int len1 = _strlen(s1);
-	int len2 = _strlen(s2);
+	unsigned int x = 0;
+	unsigned int len1 = _strlen(s1);
+	unsigned int len2 = _strlen(s2);
 	char *string;
 
 	if (len2 > n)
@@ -42,9 +42,9 @@ return (string);
  * @s: input string pointer
  * Return: number of bytes in the string, excluding the null byte at the end
  */
-int _strlen(char *s)
+unsigned int _strlen(char *s)
 {
-	int n;
+	unsigned int n;
 
 	for (n = 0; *s != '\0'; n++)
 	{
