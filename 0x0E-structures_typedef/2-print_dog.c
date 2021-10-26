@@ -22,18 +22,3 @@ void print_dog(struct dog *d)
 	}
 return;
 }
-
-/**
- * _strlen- finds the length of a string
- * @s: input string pointer
- * Return: len
- */
-int _strlen(char *s)
-{
-	int len;
-
-	for (len = 0; *s != '\0'; len++, s++)
-	{
-	}
-return (len);
-}
