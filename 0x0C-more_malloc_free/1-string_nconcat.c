@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
+#include <string.h>
 /**
  * string_nconcat- allocates memory and concatenates two strings up through n
  *                 bytes of s2.
