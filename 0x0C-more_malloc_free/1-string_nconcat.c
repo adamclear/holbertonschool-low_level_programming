@@ -1,14 +1,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
-#include <string.h>
 /**
  * string_nconcat- allocates memory and concatenates two strings up through n
  *                 bytes of s2.
  * @s1: input string pointer
  * @s2: input string pointer
  * @n: input variable
- * Return: concat if successful, NULL if not
+ * Return: string if successful, NULL if not
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
