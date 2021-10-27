@@ -11,41 +11,28 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *doginit = malloc(sizeof(dog_t));
-	char *iname = malloc((_strlen(name) + 1) * sizeof(char));
-	char *iowner = malloc((_strlen(owner) + 1) * sizeof(char));
 
-	if (!iname || !iowner)
+	if (doginit == NULL)
 	{
-		free(iname);
-		free(iowner);
 		free(doginit);
 		return (NULL);
 	}
-	_strcpy(iname, name);
-	_strcpy(iowner, owner);
-	if (doginit)
+	doginit->name = _strdup(name);
+	if (doginit->name == NULL)
 	{
-		doginit->name = iname;
-		if (doginit->name == NULL)
-		{
-			free(doginit->name);
-			free(newdog);
-			return (NULL);
-		}
-		doginit->owner = iowner;
-		if (doginit->owner == NULL)
-		{
-			free(doginit->owner);
-			free(doginit->name);
-			free(doginit);
-			return (NULL);
-		}
-		doginit->age = age;
-	}
-	else
-	{
+		free(doginit->name);
 		free(doginit);
+		return (NULL);
 	}
+	doginit->owner = _strdup(owner);
+	if (doginit->owner == NULL)
+	{
+		free(doginit->name);
+		free(doginit->owner);
+		free(doginit);
+		return (NULL);
+	}
+	doginit->age = age;
 return (doginit);
 }
 
@@ -65,16 +52,26 @@ return (len);
 }
 
 /**
- * _strcpy- copies the source string to the destination memory
- * @dest: destination array pointer
+ * _strdup- duplicates the source string to a pointer
  * @src: source array pointer
  * Return: dest
  */
-char *_strcpy(char *dest, char *src)
+char *_strdup(char *src)
 {
 	int len = _strlen(src);
 	int x;
+	char *dest;
 
+	if (src == NULL)
+	{
+		return (NULL);
+	}
+	dest = malloc(len + 1);
+	if (dest == NULL)
+	{
+		free(dest);
+		return (NULL);
+	}
 	for (x = 0; x <= len; x++)
 	{
 		dest[x] = src[x];
