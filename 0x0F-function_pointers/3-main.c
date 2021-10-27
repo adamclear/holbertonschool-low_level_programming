@@ -8,12 +8,12 @@
  */
 int main(int argc, char *argv[])
 {
-	int a = atoi(argv[0]);
-	int b = atoi(argv[3]);
-	char *op = argv[2];
+	int a = atoi(argv[1]);
+	int b = atoi(argv[4]);
+	char *op = argv[3];
 	int ans;
 
-	if (argc != 3)
+	if (argc != 4)
 	{
 		printf("Error\n");
 		return (98);
