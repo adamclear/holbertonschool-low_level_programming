@@ -14,12 +14,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *iname = malloc((_strlen(name) + 1) * sizeof(char));
 	char *iowner = malloc((_strlen(owner) + 1) * sizeof(char));
 
-	if (!iname || !iowner || !doginit || !doginit->name || !doginit->owner)
+	if (!iname || !iowner)
 	{
 		free(iname);
 		free(iowner);
-		free(doginit->name);
-		free(doginit->owner);
 		free(doginit);
 		return (NULL);
 	}
@@ -28,8 +26,25 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (doginit)
 	{
 		doginit->name = iname;
-		doginit->age = age;
+		if (doginit->name == NULL)
+		{
+			free(doginit->name);
+			free(newdog);
+			return (NULL);
+		}
 		doginit->owner = iowner;
+		if (doginit->owner == NULL)
+		{
+			free(doginit->owner);
+			free(doginit->name);
+			free(doginit);
+			return (NULL);
+		}
+		doginit->age = age;
+	}
+	else
+	{
+		free(doginit);
 	}
 return (doginit);
 }
