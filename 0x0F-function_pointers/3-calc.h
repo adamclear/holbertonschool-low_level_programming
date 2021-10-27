@@ -12,7 +12,7 @@ int (*get_op_func(char *s))(int, int);
  * struct op - Struct op
  *
  * @op: The operator
- * @f: The function associated
+ * @f: The function associated with the operator
  */
 typedef struct op
 {
