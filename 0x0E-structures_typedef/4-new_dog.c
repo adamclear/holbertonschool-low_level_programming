@@ -14,8 +14,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *iname = malloc((_strlen(name) + 1) * sizeof(char));
 	char *iowner = malloc((_strlen(owner) + 1) * sizeof(char));
 
-	if (!iname || !iowner || !doginit)
+	if (!iname || !iowner || !doginit || !doginit->name || !doginit->owner)
 	{
+		free(iname);
+		free(iowner);
+		free(doginit->name);
+		free(doginit->owner);
+		free(doginit);
 		return (NULL);
 	}
 	_strcpy(iname, name);
