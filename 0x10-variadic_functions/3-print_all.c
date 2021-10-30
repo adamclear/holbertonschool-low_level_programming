@@ -15,7 +15,6 @@ void print_all(const char * const format, ...)
 	char *string;
 
 	va_start(input, format);
-
 	while (format && format[x])
 	{
 		found = 0;
@@ -36,18 +35,14 @@ void print_all(const char * const format, ...)
 			case 's':
 				string = va_arg(input, char *);
 				if (string == NULL)
-				{
 					string = "(nil)";
-				}
 				printf("%s", string);
 				found = 1;
 				break;
 			}
 		x++;
 		if (format[x] && found == 1)
-		{
 			printf(", ");
-		}
 	}
 	printf("\n");
 	va_end(input);
