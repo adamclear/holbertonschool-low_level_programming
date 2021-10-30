@@ -17,7 +17,7 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 	x = 0;
 
-	while (format && format[x] != '\0')
+	while (format && format[x])
 	{
 		z = 0;
 		switch (format[x])
@@ -40,11 +40,11 @@ void print_all(const char * const format, ...)
 			{
 				string = "(nil)";
 			}
-			z = 1;
 			printf("%s", string);
+			z = 1;
 			break;
 		}
-		if (format[x + 1] != '\0' && z == 1)
+		if (format[x] != '\0' && z == 1)
 		{
 			printf(", ");
 		}
