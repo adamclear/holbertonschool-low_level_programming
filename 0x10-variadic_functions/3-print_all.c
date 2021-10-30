@@ -4,42 +4,46 @@
 #include "variadic_functions.h"
 /**
  * print_all - prints arguments passed to it of types char, int, float, char *.
+ * @format: input variable array for the format of the arguments
  * Return: void
  */
 void print_all(const char * const format, ...)
 {
 	int x = 0;
-	int y = 0;
+	char *string;
+	char y;
 	va_list args;
-	char *opt;
-	char *fmt;
-	opts_t optn[] = {
-					 {"c", "%c", char},
-					 {"i", "%d", int},
-					 {"f", "%f", float},
-					 {"s", "%s", char *},
-					 {NULL, NULL, NULL}
-	};
 
 	va_start(args, format);
 
-	while (format[x] != NULL)
+	while (format && format[x] != '\0')
 	{
-		while (optn[y].n != NULL)
+		y = format[x];
+		switch (y)
 		{
-			if (format[x] == optn[y].n)
+		case 'c':
+			printf("%c", va_arg(args, int));
+			break;
+		case 'i':
+			printf("%d", va_arg(args, int));
+			break;
+		case 'f':
+			printf("%f", va_arg(args, double));
+			break;
+		case 's':
+			string = va_arg(args, char *);
+			if (string == NULL)
 			{
-				break;
-				y++;
+				string = "(nil)";
 			}
+			printf("%s", string);
+			break;
 		}
-		opt = optn[y].opt;
-		fmt = optn[y].fmt;
-
-		if (y < 4)
+		if (format[x + 1] != '\0')
 		{
-			printf(opt, va_arg(args, fmt));
+			printf(", ");
 		}
+		y++;
 	}
 	printf("\n");
 	va_end(args);
