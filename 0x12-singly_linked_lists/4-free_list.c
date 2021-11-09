@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
- * free_list - Frees a node from memory
- * @head: Input list node to free
+ * free_list - Frees a linked list from memory
+ * @head: Input list to free
  * Return: void
  */
 void free_list(list_t *head)
