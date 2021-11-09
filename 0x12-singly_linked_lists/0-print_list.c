@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
 /**
  * print_list - Prints the elements of a linked list
@@ -9,7 +7,7 @@
 size_t print_list(const list_t *h)
 {
 	const list_t *node = h;
-	unsigned int nodenum = 0;
+	size_t nodenum = 0;
 
 	while (node)
 	{
