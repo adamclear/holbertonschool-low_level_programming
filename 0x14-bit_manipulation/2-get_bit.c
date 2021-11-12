@@ -3,6 +3,7 @@
  * get_bit - returns the value of a bit at index of ulint
  * @n: input ulint variable
  * @index: input variable for bit to return
+ * Return: the value of bit at index
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
