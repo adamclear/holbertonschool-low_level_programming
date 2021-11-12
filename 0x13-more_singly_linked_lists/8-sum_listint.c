@@ -6,16 +6,17 @@
  */
 int sum_listint(listint_t *head)
 {
+	listint_t *tempnode = head;
 	int sum = 0;
 
-	if (!head)
+	if (!tempnode)
 	{
 		return (0);
 	}
-	while (head)
+	while (tempnode)
 	{
-		sum += head->n;
-		head = head->next;
+		sum += tempnode->n;
+		tempnode = tempnode->next;
 	}
 return (sum);
 }
