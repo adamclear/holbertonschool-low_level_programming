@@ -12,5 +12,6 @@ int get_bit(unsigned long int n, unsigned int index)
 	{
 		return (-1);
 	}
+	/* right-shift to index and return & 1 */
 	return ((n >> index) & 1);
 }

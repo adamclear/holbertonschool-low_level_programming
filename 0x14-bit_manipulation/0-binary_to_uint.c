@@ -9,10 +9,12 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int sum = 0;
 	int x = 0;
 
+	/* if b is NULL */
 	if (!b)
 	{
 		return (0);
 	}
+	/* iterate thru and sum up the conversion, ditch if non 1 or 0 */
 	while (b[x])
 	{
 		if (b[x] == '1' || b[x] == '0')
