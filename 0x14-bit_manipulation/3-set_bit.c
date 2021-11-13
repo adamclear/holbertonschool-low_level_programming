@@ -7,10 +7,12 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
+	/* # of bits in ulint is 64, if index is more than that ret -1 */
 	if (index > 63)
 	{
 		return (-1);
 	}
+	/* change the value of n by setting bit at index by using | 1 */
 	*n |= (1 << index);
 return (1);
 }
