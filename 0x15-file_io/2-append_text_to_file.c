@@ -13,7 +13,8 @@ int append_text_to_file(const char *filename, char *text_content)
 	/* check if filename exists and if it can be opened */
 	if (!filename)
 		return (-1);
-	if ((openit = open(filename, O_WRONLY | O_APPEND)) == -1)
+	openit = open(filename, O_WRONLY | O_APPEND);
+	if (openit == -1)
 		return (-1);
 	/* if there is text content find the length and check for write */
 	if (text_content)
