@@ -1,0 +1,24 @@
+#include "main.h"
+/**
+ * create_file - creates a file and writes the indicated string to it
+ * @filename: name of the file to be created
+ * @text_content: the string to be written to the created file
+ * Return: 1 on success, -1 on failure
+ */
+int create_file(const char *filename, char *text_content)
+{
+	int openit;
+	int x = strlen(text_content);
+
+	openit = open(filename, O_CREAT | O_RDWR | O_TRUNC, 00600);
+
+	if (openit == -1 || !filename)
+	{
+		return (-1);
+	}
+	if (text_content)
+	{
+		write(openit, text_content, x);
+	}
+return (1);
+}
