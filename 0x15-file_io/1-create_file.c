@@ -10,15 +10,13 @@ int create_file(const char *filename, char *text_content)
 	int openit;
 	int x = strlen(text_content);
 
-	openit = open(filename, O_CREAT | O_RDWR | O_TRUNC, 00600);
-
-	if (openit == -1 || !filename)
-	{
+	/* check for filename and if file can be opened/created */
+	if (!filename)
 		return (-1);
-	}
+	if ((openit = open(filename, O_CREAT | O_RDWR | O_TRUNC, 00600)) == -1)
+		return (-1);
+	/* if there is text content, write it to the file */
 	if (text_content)
-	{
 		write(openit, text_content, x);
-	}
 return (1);
 }
