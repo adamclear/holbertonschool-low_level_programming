@@ -8,7 +8,6 @@
 int create_file(const char *filename, char *text_content)
 {
 	int openit;
-	int x;
 
 	/* check for filename and if file can be opened/created */
 	if (!filename)
