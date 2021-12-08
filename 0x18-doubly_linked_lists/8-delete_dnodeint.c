@@ -20,10 +20,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		free(tempnode);
 		return (1);
 	}
-	for (x = 0; tempnode != NULL; x++)
+	tempnode = tempnode->next;
+	for (x = 1; tempnode != NULL; x++)
 	{
-		tempnode = tempnode->next;
-		if (x == (index - 1))
+		if (x == index)
 		{
 			if (tempnode->next == NULL)
 			{
@@ -40,6 +40,9 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			free(tempnode);
 			return (1);
 		}
+		if (tempnode->next == NULL)
+		  return (-1);
+		tempnode = tempnode->next;
 	}
 	return (-1);
 }
