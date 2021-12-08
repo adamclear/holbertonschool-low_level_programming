@@ -21,8 +21,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	}
 	while (tempnode && x < (index - 1))
 	{
-		if (tempnode->next == NULL)
-			return (-1);
+		/*if (tempnode->next == NULL)
+		  return (-1);*/
 		tempnode = tempnode->next;
 		x++;
 	}
