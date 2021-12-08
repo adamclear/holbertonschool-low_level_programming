@@ -7,12 +7,13 @@
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *tempnode = *head;
+	dlistint_t *tempnode;
 	dlistint_t *prevnode, *nextnode;
 	unsigned int x;
 
-	if (tempnode == NULL || head == NULL)
+	if (!head || !*head)
 		return (-1);
+	tempnode = *head;
 	if (index == 0)
 	{
 		*head = (*head)->next;
@@ -39,8 +40,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			free(tempnode);
 			return (1);
 		}
-		if (tempnode->next == NULL)
-			return (-1);
 	}
 	return (-1);
 }
