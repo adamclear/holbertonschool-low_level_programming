@@ -25,18 +25,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	else
 	{
 		tmpnode = ht->array[index];
-		for (; tmpnode != NULL; tmpnode = tempnode->next)
+		for (; tmpnode != NULL; tmpnode = tmpnode->next)
 		{
 			if ((strcmp(key, tmpnode->key)) == 0)
 			{
-				free(tempnode->value);
-				tempnode->value = strdup(value);
+				free(tmpnode->value);
+				tmpnode->value = strdup(value);
 				free(newnode->value);
 				free(newnode);
 				return (1);
 			}
 		}
-		newnode->next = ht->arry[index];
+		newnode->next = ht->array[index];
 		ht->array[index] = newnode;
 	}
 	return (1);
