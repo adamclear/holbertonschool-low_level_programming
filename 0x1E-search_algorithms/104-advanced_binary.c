@@ -73,6 +73,8 @@ void print_partial(int *array, int index, int end)
  */
 int first(int *array, int start, int end, int value)
 {
+	printf("Searching in array: ");
+	print_partial(array, start, end);
 	if (array[start] == value)
 		return (start);
 	else if (start == end)
