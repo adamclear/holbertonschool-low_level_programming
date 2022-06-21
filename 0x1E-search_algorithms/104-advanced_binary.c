@@ -26,19 +26,19 @@ int recursive_advanced(int *array, int start, int end, int value)
 {
 	int mid = start + (end - start) / 2;
 
-	printf("Searching in array: ");
-	print_partial(array, start, end);
 	if (start == end && array[start] == value)
 		return (start);
-	else if (start == end)
+	printf("Searching in array: ");
+	print_partial(array, start, end);
+	if (start == end)
 		return (-1);
 	else if (array[mid] == value)
 	{
 		if (end - start >= 1)
-			return (first(array, start, end, value));
+			return (recursive_advanced(array, start, mid, value));
 	}
 	else if (array[mid] > value)
-		return (recursive_advanced(array, start, mid - 1, value));
+		return (recursive_advanced(array, start, mid, value));
 
 	return (recursive_advanced(array, mid + 1, end, value));
 }
@@ -60,27 +60,5 @@ void print_partial(int *array, int index, int end)
 		}
 		else
 			printf("%d\n", array[index]);
-	}
-}
-
-/**
- * first - Finds the first occurrence of value.
- * @array: The array to be searched.
- * @start: The starting index.
- * @end: The ending index.
- * @value: The value to search for.
- * Return: The index of value or -1.
- */
-int first(int *array, int start, int end, int value)
-{
-	if (array[start] == value)
-		return (start);
-	else if (start == end)
-		return (-1);
-	else
-	{
-		printf("Searching in array: ");
-		print_partial(array, start + 1, end);
-		return (first(array, start + 1, end, value));
 	}
 }
