@@ -32,9 +32,7 @@ int recursive_advanced(int *array, int start, int end, int value)
 	print_partial(array, start, end);
 	if (start == end)
 		return (-1);
-	else if (array[mid] == value)
-		return (recursive_advanced(array, start, mid, value));
-	else if (array[mid] > value)
+	else if (array[mid] == value || array[mid] > value)
 		return (recursive_advanced(array, start, mid, value));
 
 	return (recursive_advanced(array, mid + 1, end, value));
