@@ -9,7 +9,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 {
 	skiplist_t *next_exp, *cur_node = list, *next_node;
 
-	/* Check if head is NULL or if node-> is greater than value */
+	/* Check if head is NULL or if node->n is greater than value */
 	if (!list || cur_node->n > value)
 		return (NULL);
 	/* Else start checking value against current node */
@@ -23,7 +23,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 			printf("Value checked at index [%ld] = [%d]\n",
 					next_exp->index, next_exp->n);
 			/* If value is btwn node->n & express->n */
-			if ((cur_node->n <= value && next_exp->n > value) ||
+			if ((cur_node->n <= value && next_exp->n >= value) ||
 					next_exp->express == NULL)
 			{
 				next_node = cur_node->next;
