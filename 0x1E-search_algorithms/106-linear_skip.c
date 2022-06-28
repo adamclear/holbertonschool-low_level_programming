@@ -9,7 +9,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 {
 	skiplist_t *next_exp, *cur_node = list, *next_node;
 
-	if (!list || cur_node->n > value)
+	if (!list)
 		return (NULL);
 	for (; cur_node; cur_node = cur_node->express)
 	{
